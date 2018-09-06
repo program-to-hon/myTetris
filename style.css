@@ -1,0 +1,103 @@
+.container {
+    width: 300px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    z-index: 50;
+    background-color: black;
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
+
+#btnUp {
+    position: absolute;
+    bottom: 66px;
+    right: 55px;
+    z-index: 100;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    text-align: center;
+    color:  black;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.3;
+}
+
+#btnDown {
+    position: absolute;
+    bottom: 0px;
+    right: 55px;
+    z-index: 100;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    text-align: center;
+    color:  black;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.3;
+}
+
+#btnLeft {
+    position: absolute;
+    bottom: 33px;
+    right: 110px;
+    z-index: 100;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    text-align: center;
+    color:  black;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.3;
+}
+
+#btnRight {
+    position: absolute;
+    bottom: 33px;
+    right: 0px;
+    z-index: 100;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    text-align: center;
+    color:  black;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.3;
+}
