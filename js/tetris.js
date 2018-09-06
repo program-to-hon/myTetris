@@ -271,8 +271,10 @@
         render();
     });
 
-
-
+    //ダブルタップ禁止
+    canvas.addEventListener('touchend', event => {
+        event.preventDefault();
+    }, false);
 
 
 
