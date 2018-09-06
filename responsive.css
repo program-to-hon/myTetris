@@ -19,12 +19,12 @@
     }
 
     #btnLeft {
-        bottom: 35%;
-        right: 15%;
+        bottom: 45%;
+        right: 35%;
     }
 
     #btnRight {
-        bottom: 35%;
-        right: 35%;
+        bottom: 45%;
+        right: 15%;
     }
 }
