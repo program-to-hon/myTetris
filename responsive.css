@@ -8,8 +8,23 @@
         height: 500px;
     }
 
-    #btnUp,#btnDown,#btnLeft,#btnRight {
+    #btnUp {
         bottom: 50%;
-        right: 50%;
+        right: 25%;
+    }
+
+    #btnDown {
+        bottom: 40%;
+        right: 25%;
+    }
+
+    #btnLeft {
+        bottom: 35%;
+        right: 15%;
+    }
+
+    #btnRight {
+        bottom: 35%;
+        right: 35%;
     }
 }
