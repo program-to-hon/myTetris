@@ -104,7 +104,7 @@
                  || y + offsetY >= ROWS
                  || x + offsetX >= COLS ) {
                         if (offsetY == 1 && offsetX - currentX == 0 && offsetY - currentY == 1) {
-                            confirm('game over');
+                            //confirm('game over');
                             lose = true; // もし操作ブロックが盤面の上にあったらゲームオーバーにする
                         }
                    return false;
