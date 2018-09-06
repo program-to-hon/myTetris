@@ -7,4 +7,9 @@
         width: 100%;
         height: 500px;
     }
+
+    #btnUp,#btnDown,#btnLeft,#btnRight {
+        bottom: 50%;
+        right: 50%;
+    }
 }
