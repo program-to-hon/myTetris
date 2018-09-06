@@ -9,22 +9,22 @@
     }
 
     #btnUp {
-        bottom: 50%;
-        right: 25%;
+        bottom: 55%;
+        right: 15%;
     }
 
     #btnDown {
-        bottom: 40%;
-        right: 25%;
+        bottom: 35%;
+        right: 15%;
     }
 
     #btnLeft {
         bottom: 45%;
-        right: 35%;
+        right: 30%;
     }
 
     #btnRight {
         bottom: 45%;
-        right: 15%;
+        right: 0%;
     }
 }
