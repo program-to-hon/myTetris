@@ -1,15 +1,10 @@
 @media(max-width: 670px) {
-    html, body {
-        height: 100%;
-    }
-
-    .container{
+    #container{
         width: 100%;
     }
 
     canvas {
         width: 100%;
-        height: 100%;
     }
 
     #btnUp {
