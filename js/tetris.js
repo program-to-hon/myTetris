@@ -287,12 +287,12 @@
     $(window).load(function() {
     //画面高さ取得
     h = $(window).height();
-    $('#container').css('min-height', h + 'px');
+    $('.container').css('min-height', h + 'px');
     });
 $(window).resize(function() {
     //画面リサイズ時の高さ取得
     h = $(window).height();
-    $('#container').css('min-height', h + 'px');
+    $('.container').css('min-height', h + 'px');
     });
 
 
