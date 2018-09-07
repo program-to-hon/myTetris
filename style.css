@@ -14,6 +14,54 @@ canvas {
     border: 1px solid black;
 }
 
+#suspend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    text-align: center;
+    color:  black;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.3;
+}
+
+#suspend.disabled {
+    display: none;
+}
+
+#message {
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    border: 1px solid #aaa;
+    margin: auto 0;
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#message li2 {
+    font-size: 20px;
+}
+
+#message.disabled {
+    display: none;
+}
+
+
 #btnUp {
     position: absolute;
     bottom: 66px;
@@ -100,4 +148,8 @@ canvas {
     font-weight: bold;
     user-select: none;
     opacity: 0.3;
+}
+
+#controlKey.disabled {
+    display: none;
 }

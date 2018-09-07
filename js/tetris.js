@@ -7,6 +7,7 @@
     var interval;  // ゲームを実行するタイマーを保持する変数
     var current; // 今操作しているブロックの形
     var currentX, currentY; // 今操作しているブロックの位置
+    var message = document.getElementById('message');  //GAMEOVERメッセージ
 
     // 操作するブロックのパターン
     var shapes = [
@@ -61,7 +62,7 @@
         }
       }
       // ブロックを盤面の上のほうにセットする
-      currentX = 5;
+      currentX = 4;
       currentY = 0;
     }
 
@@ -105,7 +106,13 @@
                  || x + offsetX >= COLS ) {
                         if (offsetY == 1 && offsetX - currentX == 0 && offsetY - currentY == 1) {
                             //confirm('game over');
-                            lose = true; // もし操作ブロックが盤面の上にあったらゲームオーバーにする
+                            message.classList.remove('disabled');   //GAMEOVERメッセージ表示
+                            clearInterval(interval);
+                            suspend.classList.add('disabled');
+                            controlKey.classList.add('disabled');
+                            render();
+
+                            //lose = true; // もし操作ブロックが盤面の上にあったらゲームオーバーにする
                         }
                    return false;
                  }
@@ -179,6 +186,21 @@
           current = rotated;  // 回せる場合は回したあとの状態に操作ブロックをセットする
         }
         break;
+      case 'suspend':
+        // currentブロックを一時停止 or 再開
+        if(suspendFlag == false) {
+            clearInterval(interval);
+            suspendFlag = true;
+            suspend.textContent = ' ▶ ';
+            controlKey.classList.add('disabled');
+        } else {
+            interval = setInterval( tick, 500 );
+            tick();
+            suspendFlag = false;
+            suspend.textContent = ' | | ';
+            controlKey.classList.remove('disabled');
+        }
+        break;
       }
     }
 
@@ -236,8 +258,12 @@
     var btnUp = document.getElementById('btnUp');
     var btnDown = document.getElementById('btnDown');
     var btnLeft = document.getElementById('btnLeft');
-    var btnRight= document.getElementById('btnRight');
+    var btnRight = document.getElementById('btnRight');
+    var suspend = document.getElementById('suspend');
+    var controlKey = document.getElementById('controlKey');
+    var suspendFlag = false;
     var myKey;
+
 
     btnUp.addEventListener(EVENTNAME_TOUCHSTART, function(){
         myKey = 'rotate';
@@ -271,6 +297,24 @@
         render();
     });
 
+    suspend.addEventListener(EVENTNAME_TOUCHSTART, function(){
+        myKey = 'suspend';
+        // セットされたキーの場合はtetris.jsに記述された処理を呼び出す
+        keyPress(myKey);
+        // 描画処理を行う
+        render();
+    });
+
+
+    message.addEventListener(EVENTNAME_TOUCHSTART, function(){
+        lose = true;
+        controlKey.classList.remove('disabled'); //コントロールキー表示
+        suspend.classList.remove('disabled'); //一時停止キー表示
+        newGame();
+    });
+
+
+
     //ダブルタップ禁止
     let lastTouch = 0;
     document.addEventListener('touchend', event => {
@@ -281,20 +325,6 @@
         lastTouch = now;
     }, true);
 
-
-    /*
-    //高さ調節
-    $(window).load(function() {
-    //画面高さ取得
-    h = $(window).height();
-    $('.container').css('min-height', h + 'px');
-    });
-$(window).resize(function() {
-    //画面リサイズ時の高さ取得
-    h = $(window).height();
-    $('.container').css('min-height', h + 'px');
-    });
-    */
 
 
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -375,7 +405,8 @@ $(window).resize(function() {
         newShape();  // 操作ブロックをセット
         lose = false;  // 負けフラッグ
         //interval = setInterval( tick, 250 );  // 250ミリ秒ごとにtickという関数を呼び出す
-        interval = setInterval( tick, 1000 );  // 250ミリ秒ごとにtickという関数を呼び出す
+        interval = setInterval( tick, 500 );  // 250ミリ秒ごとにtickという関数を呼び出す
+        message.classList.add('disabled');   //GAMEOVERメッセージ隠す
     }
 
     newGame();
