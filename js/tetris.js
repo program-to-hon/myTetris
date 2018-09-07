@@ -353,7 +353,7 @@ $(window).resize(function() {
 
     function canvas_resize(){
         //var windowWidth=window.innerWidth;
-        var windowHeight=window.innnerHeight;
+        var windowHeight=window.innerHeight;
         //theCanvas.setAttribute('width',windowWidth);
         theCanvas.setAttribute('height',windowHeight);
     }
