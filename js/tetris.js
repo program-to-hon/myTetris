@@ -352,8 +352,8 @@ $(window).resize(function() {
     var theCanvas = document.getElementById('container');
 
     function canvas_resize(){
-        var windowWidth=window.outerWidth;
-        var windowHeight=window.outerHeight;
+        var windowWidth=screen.Width;
+        var windowHeight=screen.Height;
         theCanvas.setAttribute('width',windowWidth);
         theCanvas.setAttribute('height',windowHeight);
     }
