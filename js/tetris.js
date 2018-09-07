@@ -104,7 +104,7 @@
                  || y + offsetY >= ROWS
                  || x + offsetX >= COLS ) {
                         if (offsetY == 1 && offsetX - currentX == 0 && offsetY - currentY == 1) {
-                            confirm('game over');
+                            //confirm('game over');
                             lose = true; // もし操作ブロックが盤面の上にあったらゲームオーバーにする
                         }
                    return false;
@@ -332,8 +332,25 @@
     setInterval( render, 30 );
 
 
+    ///////////////////////////////////////////////////
+    // スマホレスポンシブ
+    //////////////////////////////////////////////////
+    var theCanvas = document.getElementById('myCanvas');
+
+    function canvas_resize(){
+        var windowInnerHeight=window.innerHeight;
+        theCanvas.setAttribute('height',windowInnerHeight);
+    }
+
+    window.addEventListener('resize',canvas_resize,false);
+
+    canvas_resize();
 
 
+
+    ///////////////////////////////////////////////////
+    // newGame
+    ////////////////////////////////////////////////////
 
 
     function newGame() {
