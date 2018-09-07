@@ -377,8 +377,9 @@
 
 
     ///////////////////////////////////////////////////
-    // スマホレスポンシブ
+    // スマホレスポンシブ      ※うまくいかない。。
     //////////////////////////////////////////////////
+    /*
     var theCanvas = document.getElementById('container');
 
     function canvas_resize(){
@@ -391,7 +392,7 @@
     window.addEventListener('resize',canvas_resize,false);
 
     canvas_resize();
-
+    */
 
 
     ///////////////////////////////////////////////////
