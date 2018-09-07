@@ -349,7 +349,7 @@ $(window).resize(function() {
     ///////////////////////////////////////////////////
     // スマホレスポンシブ
     //////////////////////////////////////////////////
-    var theCanvas = document.getElementById('myCanvas');
+    var theCanvas = document.getElementById('container');
 
     function canvas_resize(){
         var windowInnerHeight=window.innerHeight;
