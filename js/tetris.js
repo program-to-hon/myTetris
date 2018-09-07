@@ -282,6 +282,20 @@
     }, true);
 
 
+    /*
+    //高さ調節
+    $(window).load(function() {
+    //画面高さ取得
+    h = $(window).height();
+    $('.container').css('min-height', h + 'px');
+    });
+$(window).resize(function() {
+    //画面リサイズ時の高さ取得
+    h = $(window).height();
+    $('.container').css('min-height', h + 'px');
+    });
+    */
+
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // render.js 部
