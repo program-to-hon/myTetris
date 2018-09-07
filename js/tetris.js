@@ -352,10 +352,10 @@ $(window).resize(function() {
     var theCanvas = document.getElementById('container');
 
     function canvas_resize(){
-        var windowInnerWidth=window.innerWidth;
-        var windowInnerHeight=window.innerHeight;
-        theCanvas.setAttribute('width',windowInnerWidth);
-        theCanvas.setAttribute('height',windowInnerHeight);
+        var windowWidth=window.innerWidth;
+        var windowHeight=window.innerHeight;
+        theCanvas.setAttribute('width',windowWidth);
+        theCanvas.setAttribute('height',windowHeight);
     }
 
     window.addEventListener('resize',canvas_resize,false);
