@@ -383,9 +383,9 @@
     var theCanvas = document.getElementById('container');
 
     function canvas_resize(){
-        //var windowWidth=window.innerWidth;
+        var windowWidth=window.innerWidth;
         var windowHeight=window.Height;
-        //theCanvas.setAttribute('width',windowWidth);
+        theCanvas.setAttribute('width',windowWidth);
         theCanvas.setAttribute('height',windowHeight);
     }
 
@@ -393,7 +393,6 @@
 
     canvas_resize();
     */
-
 
     ///////////////////////////////////////////////////
     // newGame
