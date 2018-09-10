@@ -386,7 +386,7 @@
         //var windowWidth=window.innerWidth;
         var windowHeight=window.innerHeight;
         //theCanvas.setAttribute('width',windowWidth);
-        theCanvas.setAttribute('height',windowHeight - 20);
+        theCanvas.setAttribute('height',windowHeight - 30);
     }
 
     window.addEventListener('resize',canvas_resize,false);
