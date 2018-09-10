@@ -24,8 +24,16 @@ canvas {
     border: 1px solid black;
 }
 */
-
+/*
 canvas {
+    z-index: 50;
+    background-color: black;
+    display: block;
+    border: 1px solid black;
+}
+*/
+
+#myCanvas {
     z-index: 50;
     background-color: black;
     display: block;
