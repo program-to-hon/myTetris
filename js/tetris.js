@@ -379,20 +379,20 @@
     ///////////////////////////////////////////////////
     // スマホレスポンシブ      ※うまくいかない。。
     //////////////////////////////////////////////////
-    /*
-    var theCanvas = document.getElementById('container');
+
+    var theCanvas = document.getElementById('myCanvas');
 
     function canvas_resize(){
-        var windowWidth=window.innerWidth;
-        var windowHeight=window.Height;
-        theCanvas.setAttribute('width',windowWidth);
-        theCanvas.setAttribute('height',windowHeight);
+        //var windowWidth=window.innerWidth;
+        var windowHeight=window.innerHeight;
+        //theCanvas.setAttribute('width',windowWidth);
+        theCanvas.setAttribute('height',windowHeight - 20);
     }
 
     window.addEventListener('resize',canvas_resize,false);
 
     canvas_resize();
-    */
+
 
     ///////////////////////////////////////////////////
     // newGame
