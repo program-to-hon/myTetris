@@ -8,8 +8,6 @@
     var current; // 今操作しているブロックの形
     var currentX, currentY; // 今操作しているブロックの位置
     var message = document.getElementById('message');  //GAMEOVERメッセージ
-    var score = document.getElementById('score');  //点数表示するところ
-    var scoreUnit = 200;  //一行消したときに入る点数
 
     // 操作するブロックのパターン
     var shapes = [
@@ -151,9 +149,6 @@
         // もし一行揃っていたら, サウンドを鳴らしてそれらを消す。
         if ( rowFilled ) {
           document.getElementById( 'clearsound' ).play();  // 消滅サウンドを鳴らす
-          //点数加算
-          score.textContent = scoreUnit;
-          scoreUnit += scoreUnit;
           // その上にあったブロックを一つずつ落としていく
           for ( var yy = y; yy > 0; --yy ) {
             for ( x = 0; x < COLS; ++x ) {
@@ -393,7 +388,7 @@
         var windowHeight=window.innerHeight;
         //theCanvas.setAttribute('width',windowWidth);
         //theCanvas.setAttribute('height',600); //windowHeight - 30);
-        theCanvas.style.height = windowHeight * 0.92 + 'px' ;
+        theCanvas.style.height = windowHeight * 0.95 + 'px' ;
     }
 
     window.addEventListener('resize',canvas_resize,false);
@@ -412,9 +407,8 @@
         newShape();  // 操作ブロックをセット
         lose = false;  // 負けフラッグ
         //interval = setInterval( tick, 250 );  // 250ミリ秒ごとにtickという関数を呼び出す
-        interval = setInterval( tick, 500 );  // 500ミリ秒ごとにtickという関数を呼び出す
+        interval = setInterval( tick, 500 );  // 250ミリ秒ごとにtickという関数を呼び出す
         message.classList.add('disabled');   //GAMEOVERメッセージ隠す
-        score.textContent = 'SCORE';
     }
 
     newGame();

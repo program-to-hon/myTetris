@@ -1,3 +1,40 @@
+/*************************************/
+/*   index.html部
+/*************************************/
+/*
+.indexContainer {
+    width: 3000px;
+    height: 6000px;
+    background-image: url(img/skysea.jpg);
+    background-size: cover;
+}
+*/
+
+.startBtnWrapper {
+    text-align: center;
+}
+
+.startBtn {
+    border: 1px solid #aaa;
+    color: #fff;
+    display: inline-block;
+    margin-top: 300px;
+    width: 300px;
+    background-color: #aaa;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*************************************/
+/*   game.html部
+/*************************************/
 /*
 #container {
     width: 300px;
@@ -6,6 +43,16 @@
     position: relative;
 }
 */
+
+.scoreWrapper {
+    text-align: center;
+}
+
+#score {
+    width: 300px;
+    display: inline-block;
+    border: 1px solid;
+}
 
 #container {
     width: 300px;
