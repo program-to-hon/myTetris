@@ -393,7 +393,7 @@
         var windowHeight=window.innerHeight;
         //theCanvas.setAttribute('width',windowWidth);
         //theCanvas.setAttribute('height',600); //windowHeight - 30);
-        theCanvas.style.height = windowHeight * 0.92 + 'px' ;
+        theCanvas.style.height = windowHeight * 0.90 + 'px' ;
     }
 
     window.addEventListener('resize',canvas_resize,false);

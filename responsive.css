@@ -13,33 +13,36 @@
 /* game.html部
 /***********************************/
 
-    #container{
-        width: 100%;
-    }
+#score {
+    width: 100%;
+}
+#container{
+    width: 100%;
+}
 
 
-    canvas {
-        width: 100%;
-    }
+canvas {
+    width: 100%;
+}
 
 
-    #btnUp {
-        bottom: 55%;
-        right: 15%;
-    }
+#btnUp {
+    bottom: 55%;
+    right: 15%;
+}
 
-    #btnDown {
-        bottom: 35%;
-        right: 15%;
-    }
+#btnDown {
+    bottom: 35%;
+    right: 15%;
+}
 
-    #btnLeft {
-        bottom: 45%;
-        right: 30%;
-    }
+#btnLeft {
+    bottom: 45%;
+    right: 30%;
+}
 
-    #btnRight {
-        bottom: 45%;
-        right: 0%;
-    }
+#btnRight {
+    bottom: 45%;
+    right: 0%;
+}
 }
