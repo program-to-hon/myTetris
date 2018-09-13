@@ -10,6 +10,7 @@
     var message = document.getElementById('message');  //GAMEOVERメッセージ
     var score = document.getElementById('score');  //点数表示するところ
     var scoreUnit = 200;  //一行消したときに入る点数
+    var scoreSum = 0; //点数合計
 
     // 操作するブロックのパターン
     var shapes = [
@@ -152,8 +153,8 @@
         if ( rowFilled ) {
           document.getElementById( 'clearsound' ).play();  // 消滅サウンドを鳴らす
           //点数加算
-          score.textContent = scoreUnit;
-          scoreUnit += scoreUnit;
+          scoreSum = scoreSum + scoreUnit;
+          score.textContent = scoreSum;
           // その上にあったブロックを一つずつ落としていく
           for ( var yy = y; yy > 0; --yy ) {
             for ( x = 0; x < COLS; ++x ) {
